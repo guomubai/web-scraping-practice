@@ -2,9 +2,11 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const fs = require("fs");
+
 // URL of the page we want to scrape
 const url = "https://www.amazon.com/Oculus-Quest-Advanced-All-One-Virtual/dp/B099VMT8VZ/ref=sr_1_3?crid=2XOPRGLK0DPJ7&keywords=oculus&qid=1649201433&sprefix=oculus%2Caps%2C75&sr=8-3";
 const product = { name: "", image: "", price: "", link: "" };
+
 // Scrape function
 async function scrape() {
 	try {
@@ -31,4 +33,5 @@ async function scrape() {
 		console.error(err);
 	}
 }
+
 scrape()
